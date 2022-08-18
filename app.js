@@ -31,3 +31,18 @@ if (userScore >= highScore) {
 } else {
 	console.log(`Great Game, you scored ${userScore}, but it did not beat ${highScore}`);
 }
+
+// example 4
+
+ let password = 'Kitty hii'
+
+ if (password.length >= 6) {
+	//indexOf in this use case means that if it finds an empty space the empty space message shows 
+	if (password.indexOf(' ') === -1) {
+		console.log("Valid Password")
+	} else {
+		console.log("Password is long enough but can't contain an empty space")
+	}
+ } else {
+	console.log("Password must be longer")
+ }
