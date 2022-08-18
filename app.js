@@ -39,10 +39,21 @@ if (userScore >= highScore) {
  if (password.length >= 6) {
 	//indexOf in this use case means that if it finds an empty space the empty space message shows 
 	if (password.indexOf(' ') === -1) {
-		console.log("Valid Password")
+		console.log("Valid Password");
 	} else {
-		console.log("Password is long enough but can't contain an empty space")
+		console.log("Password is long enough but can't contain an empty space");
 	}
  } else {
-	console.log("Password must be longer")
+	console.log("Password must be longer");
  }
+
+//  example 5 
+
+let new_password = "HelloKitty"
+
+if (new_password.length >= 8 && new_password.indexOf(' ') === -1) {
+	console.log("Valid Password")
+} else {
+	console.log("Invalid Password")
+}
+
