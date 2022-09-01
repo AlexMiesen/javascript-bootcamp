@@ -59,7 +59,7 @@ if (new_password.length >= 8 && new_password.indexOf(' ') === -1) {
 
 //example 6
 
-day = 4
+day = "apple"
 
 switch(day) {
 	case 1: 
@@ -83,4 +83,6 @@ switch(day) {
 	case 7: 
 		console.log("SUNDAY") 
 		break
+	default:
+		console.log("Invalid day")		
 }
