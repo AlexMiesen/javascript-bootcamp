@@ -85,4 +85,15 @@ switch(day) {
 		break
 	default:
 		console.log("Invalid day")		
+		break
 }
+
+//example 7, use of pop and push 
+
+const fruits = ['apple', 'banana', 'pear', 'pineapple']
+
+fruits.pop() // remove item 
+
+console.log(fruits)
+
+fruits.push('grape') //add item 
