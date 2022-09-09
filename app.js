@@ -1,4 +1,4 @@
-alert("It works!")
+//alert("It works!")
 
 console.log(3 + 7, "hello", true);
 
@@ -102,10 +102,25 @@ fruits.push('grape') //add item
 
 const dishesToDo = ["mug", "small plate", "bowl", "cup"]
 
-dishesToDo.unshift("spoon")
+dishesToDo.unshift("spoon") // adds to the start of the array
 
 console.log(dishesToDo)
 
-dishesToDo.shift()
+dishesToDo.shift() // removes from start of the array
 
 console.log(dishesToDo)
+
+//example 9, use of other methods of arrays 
+let meats = ["steak", "chicken", "pork"]
+mixedArray = dishesToDo.concat(fruits, meats) 
+console.log(mixedArray) // add arrays together with concat
+
+console.log(meats.includes("chicken")) //returns boolean if present
+console.log(meats.includes("chicken", 2)) // is it present after the index of 2? in this example it's false
+console.log(meats.indexOf("pork")) // returns the index number, in this example '2'
+
+meats.reverse()
+console.log(meats) //reserves the array (in place!)
+
+console.log(meats.join('-')) // joins the strings in the array togther
+console.log(["hello", 1, false].join('#')) // will turn things into a string.
