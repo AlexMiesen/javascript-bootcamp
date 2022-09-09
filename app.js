@@ -92,8 +92,20 @@ switch(day) {
 
 const fruits = ['apple', 'banana', 'pear', 'pineapple']
 
-fruits.pop() // remove item 
+fruits.pop() // remove last item 
 
 console.log(fruits)
 
 fruits.push('grape') //add item 
+
+//example 8, use of shift and unshift
+
+const dishesToDo = ["mug", "small plate", "bowl", "cup"]
+
+dishesToDo.unshift("spoon")
+
+console.log(dishesToDo)
+
+dishesToDo.shift()
+
+console.log(dishesToDo)
