@@ -124,3 +124,25 @@ console.log(meats) //reserves the array (in place!)
 
 console.log(meats.join('-')) // joins the strings in the array togther
 console.log(["hello", 1, false].join('#')) // will turn things into a string.
+
+// example 10
+
+let animals = ["Horse", "Cow","pig","turtle", "koala", "kanagaroo", "kukabara"]
+
+const ausAnimals = animals.slice(4)
+const dinner = animals.slice(1, 3)
+const tripleAAnimals = animals.slice(-2)
+console.log(ausAnimals)
+console.log(dinner)
+console.log(tripleAAnimals)
+
+// example 11, splice
+
+console.log(animals.splice(3, 1, 'shark')) //will return 'turtle' insert by using '0' in the second argument
+console.log(animals) // notice how shark has replaced the turtle
+
+// example 12, sort (this works for letter but not numbers!)
+
+const sortedAnimals = animals.sort()
+
+console.log(sortedAnimals)
