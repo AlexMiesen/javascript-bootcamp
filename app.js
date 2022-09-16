@@ -146,3 +146,13 @@ console.log(animals) // notice how shark has replaced the turtle
 const sortedAnimals = animals.sort()
 
 console.log(sortedAnimals)
+
+//Section 6 - Objects
+
+const fitBitData = {
+	workOut: "Body Builder",
+	jogTime: 33.6,
+	workOutWeek: "5 of 7",
+	alarmSet: false 
+}
+console.log(fitBitData)
