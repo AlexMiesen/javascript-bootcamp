@@ -155,4 +155,5 @@ const fitBitData = {
 	workOutWeek: "5 of 7",
 	alarmSet: false 
 }
-console.log(fitBitData)
+console.log(fitBitData.workOutWeek)
+console.log(fitBitData["workOut"])
