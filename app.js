@@ -157,3 +157,9 @@ const fitBitData = {
 }
 console.log(fitBitData.workOutWeek)
 console.log(fitBitData["workOut"])
+
+//section 7 - loops
+
+for (let i = 0; i < 10; i+=3){ //here the number starts at 0, will run if the number is less than 10, and go up by 3 each time
+	console.log(i)
+}
