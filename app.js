@@ -163,3 +163,11 @@ console.log(fitBitData["workOut"])
 for (let i = 0; i < 10; i+=3){ //here the number starts at 0, will run if the number is less than 10, and go up by 3 each time
 	console.log(i)
 }
+
+for (let num = 1; num <= 20; num++) {
+	console.log(`${num}x${num} = ${num * num }`)
+}
+
+for (let i = 50; i >= 0; i -= 10) {	//counting down from 50
+	console.log(i)	
+}
