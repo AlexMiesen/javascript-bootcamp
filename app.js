@@ -171,3 +171,51 @@ for (let num = 1; num <= 20; num++) {
 for (let i = 50; i >= 0; i -= 10) {	//counting down from 50
 	console.log(i)	
 }
+
+//for loops and arrays
+console.log('for loops and arrays')
+
+const seaCreatures = ["sting ray", "dolphin", "crab", "sword fish", 'eel', 'shark']
+
+for (let i = 0; i <= seaCreatures.length; i++) {
+	console.log(i, seaCreatures[i])
+
+}
+
+const winningDogs = [
+	{
+		dogType: 'dalmation',
+		lapTime: 3.6
+	},
+	{
+		dogType: 'bulldog',
+		lapTime: 5.0
+	},
+	{
+		dogType: 'corgy',
+		lapTime: 7.9
+	},
+	{
+		dogType: 'great dane',
+		lapTime: 1.2
+	}
+]
+
+for (let i = 0; i <= winningDogs.length - 1; i++) {
+	let dog = winningDogs[i]
+	console.log(`${dog.dogType} has a lap speed of ${dog.lapTime}`)
+}
+let totalLapTime = 0  
+
+for (let i = 0; i <= winningDogs.length - 1; i++) {	
+	let dog = winningDogs[i]
+	console.log(`${totalLapTime += dog.lapTime }`)
+}
+console.log('average laptime:', totalLapTime / winningDogs.length)
+
+const word = 'diploma'
+let reversedWord = ''
+
+for(let i = word.length - 1; i >= 0; i--) {
+	console.log(reversedWord += word[i]) // adds a new letter to the reversedWord empty string
+}
