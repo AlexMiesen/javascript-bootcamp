@@ -219,3 +219,34 @@ let reversedWord = ''
 for(let i = word.length - 1; i >= 0; i--) {
 	console.log(reversedWord += word[i]) // adds a new letter to the reversedWord empty string
 }
+
+//nested loops
+const numberOfPlayers = 5
+const weaponsArray = ['knife', 'gun', 'sword', 'bazooka']
+
+
+for(let i = 0; i <= numberOfPlayers - 1; i++) {
+	console.log('player:',i)
+	for(let i = 0; i <= weaponsArray.length - 1; i++) {
+		console.log(weaponsArray[i])
+	}
+}
+
+// while loop. Good for when we done know how long it will run. Good for games. 
+
+let countUpTo5 = 0;
+
+while(countUpTo5 <= 5) {
+	console.log(countUpTo5)
+	countUpTo5++
+}
+
+let target = Math.floor(Math.random() * 10)
+let guess = Math.floor(Math.random() * 10)
+
+while (guess !== target) {
+	console.log(`Target is: ${target}. Guess is ${guess}`)
+	guess = Math.floor(Math.random() * 10)
+}
+
+console.log(`Congrats, guess was ${guess} and target was ${target}`)
