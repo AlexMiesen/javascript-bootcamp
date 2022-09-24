@@ -262,3 +262,33 @@ for(let subreddit of subreddits) {
 for (let char of 'cockadoodledoo') {
 	console.log(char, char.toUpperCase)
 }
+
+// For of with objects
+// Objects are not iterable so we can't use 'for ( of ) loop', However we can use 'Object.keys/values to get one or the other. 
+
+const movieReviews = {
+	tombRaider: 9,
+	killBill:  8,
+	starWars:	7,
+	shrek: 5,
+	indianaJones: 10
+}
+
+console.log(Object.keys(movieReviews))
+console.log(Object.values(movieReviews))
+
+for ( movie of Object.keys(movieReviews)) {
+	console.log(movie, movieReviews[movie])
+}
+
+const ratings = Object.values(movieReviews);
+
+let averageRatingstotal = 0
+
+for (let rating of ratings) {
+	averageRatingstotal += rating;
+}
+
+averageRatingstotal /= ratings.length
+
+console.log(averageRatingstotal) // we could also just do console.log(averageRatingstotal/ratings.length)
