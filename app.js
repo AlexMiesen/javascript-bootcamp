@@ -291,4 +291,28 @@ for (let rating of ratings) {
 
 averageRatingstotal /= ratings.length
 
-console.log(averageRatingstotal) // we could also just do console.log(averageRatingstotal/ratings.length)
+console.log(`The average rating is: ${averageRatingstotal}`) // we could also just do console.log(averageRatingstotal/ratings.length)
+
+// for in loops . Here we don't have to use Object.keys/values
+
+const realMadridSquadEarlyTwoThousands = {
+	raul: 7,
+	ronaldo: 11,
+	zidane: 5, 
+	hierro: 6,
+	casillas: 1
+}
+
+for ( let player in realMadridSquadEarlyTwoThousands) {
+	console.log(player)
+	console.log(realMadridSquadEarlyTwoThousands[player])
+}
+
+let squadNumberTotal = 0
+
+
+for ( let player in realMadridSquadEarlyTwoThousands) {
+	squadNumberTotal += realMadridSquadEarlyTwoThousands[player]
+}
+
+console.log(`the squad total is ${squadNumberTotal}`)
