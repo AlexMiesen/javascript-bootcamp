@@ -250,3 +250,15 @@ while (guess !== target) {
 }
 
 console.log(`Congrats, guess was ${guess} and target was ${target}`)
+
+// For..of loops 
+
+let subreddits = ['soccer', 'books', 'wicked edge', 'guitar pedals']
+
+for(let subreddit of subreddits) {
+	console.log(subreddit)
+}
+
+for (let char of 'cockadoodledoo') {
+	console.log(char, char.toUpperCase)
+}
