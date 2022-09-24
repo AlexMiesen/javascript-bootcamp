@@ -316,3 +316,47 @@ for ( let player in realMadridSquadEarlyTwoThousands) {
 }
 
 console.log(`the squad total is ${squadNumberTotal}`)
+
+// functions 
+
+function greetingsInMyLanguages() {
+	console.log("G'day")
+	console.log("Goedemorgen")
+	console.log("Buenos dias")
+}
+
+greetingsInMyLanguages()
+
+
+// function within a function (also modified throwDice to take a number)
+function rollDie() {
+	let roll = Math.floor(Math.random() * 6) + 1
+	console.log(`Rolled: ${roll}`)
+}
+
+rollDie() 
+
+function throwDice(numberOfRolls) {
+	for(let i = 0; i < numberOfRolls; i++) {
+		rollDie()
+	}
+}
+
+throwDice(3)
+
+// function with an argument 
+
+function greetUser(userInput) {
+	console.log(`Hello ${userInput}!`)
+}
+
+// function with multiple parametres 
+function capitalise(name){
+	const captialLetter = name[0].toUpperCase()
+	result = name.replace(name[0], captialLetter)
+	return result
+}
+
+function fullName(firstName, lastName) {
+	console.log(`${capitalise(firstName)} ${capitalise(lastName)}`)
+}
