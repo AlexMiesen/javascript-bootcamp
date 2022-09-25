@@ -400,3 +400,22 @@ function isValidPassword(examplePassword, username) {
 		return false
 	}
 }
+
+// alternative:
+
+// function isValidPassword(examplePassword, username) {
+// 	const tooShort = examplePassword.length < 8;
+// 	const hasSpace = examplePassword.indexOf(' ') !== -1;
+// 	const tooSimilar = examplePassword.indexOf(username) !== -1;
+// 	return !tooShort && !hasSpace && !tooSimilar;
+// }
+
+// Function Challenge 2: Average
+function avg(arr) {
+	sum = 0
+	for (let num of arr) {
+		console.log(num)
+		sum += num
+	}
+	return sum / arr.length
+}
