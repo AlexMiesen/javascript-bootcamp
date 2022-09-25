@@ -361,12 +361,42 @@ function fullName(firstName, lastName) {
 	console.log(`${capitalise(firstName)} ${capitalise(lastName)}`)
 }
 
-//multiple return statements
+//multiple return statements, functions stop once you hit a return.  
 
-function isPurple(colour) {
-	if(colour.toLowerCase() === 'purple')
-		return true;
-	else {
+// function isPurple(colour) {
+// 	if(colour.toLowerCase() === 'purple')
+// 		return true;
+// 	else {
+// 		return false
+// 	}	
+// }
+
+// function isPurple(colour) {
+// 	if(colour.toLowerCase() === 'purple') {
+// 		return true;
+// 	}
+// 	return false
+// }
+
+// function isPurple(colour) {
+// 	return colour.toLowerCase() === 'purple';
+// }
+
+function containsPurple(array) {
+	for(let colour of array) {
+		if(colour === 'purple' || colour === 'Indigo') {
+			return true
+		}
+	}
+	return false
+}
+
+//Function Challenge 1: passwordValidator
+
+function isValidPassword(examplePassword, username) {
+	if (examplePassword.length >= 8 && examplePassword.indexOf(' ') === -1 && examplePassword.indexOf(username) === -1) {
+		return true
+	} else {
 		return false
-	}	
+	}
 }
