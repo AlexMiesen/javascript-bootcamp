@@ -350,7 +350,7 @@ function greetUser(userInput) {
 	console.log(`Hello ${userInput}!`)
 }
 
-// function with multiple parametres 
+// function with multiple parametres (Added with my own return!)
 function capitalise(name){
 	const captialLetter = name[0].toUpperCase()
 	result = name.replace(name[0], captialLetter)
@@ -359,4 +359,14 @@ function capitalise(name){
 
 function fullName(firstName, lastName) {
 	console.log(`${capitalise(firstName)} ${capitalise(lastName)}`)
+}
+
+//multiple return statements
+
+function isPurple(colour) {
+	if(colour.toLowerCase() === 'purple')
+		return true;
+	else {
+		return false
+	}	
 }
