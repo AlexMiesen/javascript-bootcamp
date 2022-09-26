@@ -443,3 +443,19 @@ function isPangram(sentence) {
 	}
 	return true
 }
+
+// Function Challenge 4: getCard()
+
+function getCard() {
+	let value = [2,3,4,5,6,7,8,9,10,'J','Q', 'K','A']
+	let suit = ['clubs', 'spades', 'hearts', 'diamonds']
+	
+	randomValue = value[Math.floor(Math.random() * value.length)]
+	randomSuit = suit[Math.floor(Math.random() * suit.length)]
+
+	card = {
+		value: randomValue,
+		suit: randomSuit
+	}
+	return card
+}
