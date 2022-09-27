@@ -450,8 +450,12 @@ function getCard() {
 	let value = [2,3,4,5,6,7,8,9,10,'J','Q', 'K','A']
 	let suit = ['clubs', 'spades', 'hearts', 'diamonds']
 	
-	randomValue = value[Math.floor(Math.random() * value.length)]
-	randomSuit = suit[Math.floor(Math.random() * suit.length)]
+
+	function getRandomElementFromArray(array) {
+		return Math.floor(Math.random() * array.length)
+	}
+	randomValue = value[getRandomElementFromArray(value)]
+	randomSuit = suit[getRandomElementFromArray(suit)]
 
 	card = {
 		value: randomValue,
