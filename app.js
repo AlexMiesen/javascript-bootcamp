@@ -468,8 +468,53 @@ function getCard() {
 
 // the word 'multiply' does not have to be there, we can just do an anonymous function
 const product = function multiply(x, y) {
-	let sum = x * y
-	return sum 
+	return x * y
 }
 
 console.dir(product) // we can see the object form. 'proof' of object with key an value properties 
+
+const devide = function (x, y) {
+	return x / y
+}
+
+const operations = [product, devide] 
+
+console.log(operations[0](100, 4))
+
+for(let func of operations){
+	let result = func(60,2)
+	console.log(`Ran operation ${func} and result was ${result}`)
+}
+
+// We can also call the product function from within an object. mathsRobot.doMultiplication(2,10)
+const mathsRobot = {
+	doMultiplication: product
+}
+
+// Functions as arguments 
+
+function singIfYourHappy(){
+	console.log('if your happy and you know it clap your hands')
+}
+function singAroundTheWorld(){
+	console.log('Around the World')
+}
+
+function repeatNTime(sing, num){
+	for (i = 0; i < num; i++) {
+		sing()
+	}
+}
+
+repeatNTime(singAroundTheWorld, 5)
+
+function randomSongToSing(song1, song2) {
+	let randomSong = Math.floor(Math.random() * 10)
+	if (randomSong > 5 ) {
+		song1()
+	} else {
+		song2()
+	}
+}
+
+randomSongToSing(singAroundTheWorld, singIfYourHappy)
