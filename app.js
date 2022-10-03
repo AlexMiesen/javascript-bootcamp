@@ -463,3 +463,13 @@ function getCard() {
 	}
 	return card
 }
+
+// Function Expressions
+
+// the word 'multiply' does not have to be there, we can just do an anonymous function
+const product = function multiply(x, y) {
+	let sum = x * y
+	return sum 
+}
+
+console.dir(product) // we can see the object form. 'proof' of object with key an value properties 
