@@ -518,3 +518,39 @@ function randomSongToSing(song1, song2) {
 }
 
 randomSongToSing(singAroundTheWorld, singIfYourHappy)
+
+// functions as return values
+
+function multiplyBy(num) {
+	return function(product){ // we can use 'return function () { }' to return a function. In our example the num we return is product x num. 
+		return product * num;
+	} 
+}
+
+const triple = multiplyBy(3)
+const double = multiplyBy(2)
+
+
+// function makeBetweenFunc(firstNum, SecondNum) {      This works! but we can shorten it below
+// 	return function(input) {
+// 		if (input >= firstNum && input <= SecondNum) {
+// 			return true
+// 		} else {
+// 			return false
+// 		}
+// 	}
+// }
+
+
+function makeBetweenFunc(firstNum, SecondNum) {
+	return function(input) {
+		return input >= firstNum && input <= SecondNum
+	}
+}
+
+
+const isChild = makeBetweenFunc(0, 18)
+
+const isInNineties = makeBetweenFunc(1990, 1999)
+
+const isNiceWeather = makeBetweenFunc(25, 30)
