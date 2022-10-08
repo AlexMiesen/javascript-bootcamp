@@ -554,3 +554,28 @@ const isChild = makeBetweenFunc(0, 18)
 const isInNineties = makeBetweenFunc(1990, 1999)
 
 const isNiceWeather = makeBetweenFunc(25, 30)
+
+// Callbacks - passing a function into another function 
+
+const btn = document.querySelector('button')
+btn.addEventListener('click', function(){
+	alert('Why did you click me?')
+})
+
+// Section 10
+console.log('Section 10')
+// Foreach 
+
+const numbers = [20,21,22,23,24,25,26,27]
+
+numbers.forEach(function(num){
+	console.log(num * 2)
+})
+
+console.log('Print Triple')
+
+function printTriple(n){
+	console.log(n * 3);
+}
+
+numbers.forEach(printTriple)
