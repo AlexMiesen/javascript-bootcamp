@@ -579,3 +579,81 @@ function printTriple(n){
 }
 
 numbers.forEach(printTriple)
+
+numbers.forEach(function(num, index) {  // second parametre is the index
+	console.log(index, num)
+});
+
+
+const books = [
+	{
+		title: 'Harry Potter',
+		authors: ['JK Rowling'],
+		rating: 4.25
+	},
+	{
+		title: 'Good Omens',
+		authors: ['Terry Pratchett', 'Neil Gaiman'],
+		rating: 3.00
+	},
+	{
+		title: 'American Gods',
+		authors: ['Neil Gaiman'],
+		rating: 4.11
+	},
+	{
+		title: 'Dark Emu',
+		authors: ['Bruce Pascoe'],
+		rating: 4.25
+	},
+]
+
+books.forEach(function(book) {
+	console.log(book.title.toUpperCase())
+})
+
+// Map
+
+const doubles = numbers.map(function(num){
+	return num * 2
+})
+
+console.log(doubles)
+
+const isEvenNumbers = numbers.map((n) => {
+	return {
+		value: n,
+		isEven: n % 2 === 0
+	}
+})
+
+console.log(isEvenNumbers)
+
+const words = ['asap', 'byob', 'rsvp', 'diy']
+
+const abbreviations = words.map(function(word){
+	return word.toUpperCase().split('').join('.')
+})
+
+console.log(abbreviations)
+
+const bookTitles = books.map(function(book){
+	return book.title
+})
+
+console.log(bookTitles)
+
+// Arrow functions
+
+const square = (x) => {
+	return x * x
+}
+
+const isEven = num => {  // since there is only one parametre it is ok to leave the '()'
+	return num % 2 === 0
+}
+
+const greet = () => {
+	console.log('HI!')
+}
+greet()
