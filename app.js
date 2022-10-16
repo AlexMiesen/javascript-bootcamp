@@ -604,7 +604,7 @@ const books = [
 	{
 		title: 'Dark Emu',
 		authors: ['Bruce Pascoe'],
-		rating: 4.25
+		rating: 4.3
 	},
 ]
 
@@ -657,3 +657,26 @@ const greet = () => {
 	console.log('HI!')
 }
 greet()
+
+// implicit returns - we can have a function that does not need a 'return'
+
+const quadrupleNumbers = numbers.map(n => n * 2)
+console.log(quadrupleNumbers)
+
+const parityList = numbers.map((n) => n % 2 === 0 ? 'even' : 'odd')
+
+// using 'find' in an array
+
+let movies = ['The Fantastic Mr. Fox', 'Mr. and Mrs. Smith', 'Mrs. Doubtfire', 'Mr. Deeds']
+
+const mrsMovie = movies.find((movie) => {
+	return movie.includes('Mrs')
+})
+const mrsMovie2 = movies.find((movie) => { //looks for the first one that start with 'Mrs' 
+	return movie.indexOf('Mrs') === 0
+})
+
+const goodBook = books.find(b => b.rating >= 4.3)
+const neilBook = books.find(book => (
+	book.authors.includes('Neil Gaiman')
+))
