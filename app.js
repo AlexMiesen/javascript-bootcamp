@@ -589,22 +589,38 @@ const books = [
 	{
 		title: 'Harry Potter',
 		authors: ['JK Rowling'],
-		rating: 4.25
+		rating: 4.25,
+		genres:['fiction', 'fantasy']
 	},
 	{
 		title: 'Good Omens',
 		authors: ['Terry Pratchett', 'Neil Gaiman'],
-		rating: 3.00
+		rating: 3.00,
+		genres:['fiction', 'fantasy']
 	},
 	{
 		title: 'American Gods',
 		authors: ['Neil Gaiman'],
-		rating: 4.11
+		rating: 4.11,
+		genres:['fiction', 'fantasy']
 	},
 	{
 		title: 'Dark Emu',
 		authors: ['Bruce Pascoe'],
-		rating: 4.3
+		rating: 4.3,
+		genres:['non-fiction']
+	},
+	{
+		title: 'Bone: The Complete Edition',
+		authors: ['Jeff Smith'],
+		rating: 4.42,
+		genres:['fiction', 'graphic novel', 'fantasy']
+	},
+	{
+		title: 'Lord of the flies',
+		authors: ['William Golding'],
+		rating: 3.67,
+		genres:['fiction', 'graphic novel']
 	},
 ]
 
@@ -680,3 +696,43 @@ const goodBook = books.find(b => b.rating >= 4.3)
 const neilBook = books.find(book => (
 	book.authors.includes('Neil Gaiman')
 ))
+
+// filter array 
+
+const odds = numbers.filter(n => n % 2 === 1)
+const evens = numbers.filter(n => n % 2 === 0)
+
+const bigNums = numbers.filter(n => n > 25)
+
+const goodBooks = books.filter(
+	(book) => book.rating > 4.0
+)
+
+const fantasyNovels = books.filter(book => (
+	book.genres.includes('fantasy')
+))
+
+const nonFictionAndGraphic = books.filter(book => {
+	return book.genres.includes('non-fiction') || book.genres.includes('graphic novel') 
+})
+
+const query = 'The'
+
+const results = books.filter(book => 
+	book.title.toLowerCase().includes(query.toLowerCase())
+)
+
+// 'Every' method
+
+const simpleWords = ['dog', 'dig', 'bag', 'tag', 'rug']
+
+const threeLetterWords = simpleWords.every((word) =>
+	word.length === 3
+)
+
+const areWordsEndingWithG = simpleWords.every((word) => {
+	const last = word.length - 1
+	return word[last] === 'g' 
+})
+
+const areWordsStartingWithD = simpleWords.some((word) => word[0] === 'd')
