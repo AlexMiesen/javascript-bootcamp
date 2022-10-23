@@ -736,3 +736,9 @@ const areWordsEndingWithG = simpleWords.every((word) => {
 })
 
 const areWordsStartingWithD = simpleWords.some((word) => word[0] === 'd')
+
+const areBooksRatingsAboveThreeStars = books.every((book) => book.rating > 3)
+
+const anyTwoAuthors = books.some((book) => book.authors.length === 2)
+
+// Sort method revisited
