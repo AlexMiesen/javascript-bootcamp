@@ -747,7 +747,33 @@ const prices = [400.24, 3000, 12, 9500, 99.99, 72]
 
 prices.sort() // sort them as if a string so ... 12, 3000, 400.24, 72 , 9500, 99,99
 
-const ascSort = prices.sort((a,b) => a - b)
+const ascSort = prices.slice().sort((a,b) => a - b)
 
- 
-//const ascDesc = prices.sort((a,b) => b - a)
+const ascDesc = prices.slice().sort((a,b) => b - a)  
+
+// we use slice so that we can return a new array, sort will mutate the original array otherwise.
+
+const bookRatingSorted = books.sort((a,b) => a.rating - b.rating)
+
+// Reduce method
+
+
+// const numbers = [20,21,22,23,24,25,26,27]
+const numbersProduct = numbers.reduce((total, currentValue) => {
+	return total * currentValue
+})
+
+// find the max using reduce
+
+const maxNumberInPrices = prices.reduce((max, currentValue) => {
+	if (currentValue > max) return currentValue;
+	return max
+})
+
+// below is the same but written using Math.max which return the largest number, opposite is Max.min
+
+// const maxNumberInPrices = prices.reduce((max, currentValue) => {
+// 	Math.max(max, currentValue)
+// })
+
+console.log(maxNumberInPrices)
