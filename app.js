@@ -742,3 +742,12 @@ const areBooksRatingsAboveThreeStars = books.every((book) => book.rating > 3)
 const anyTwoAuthors = books.some((book) => book.authors.length === 2)
 
 // Sort method revisited
+
+const prices = [400.24, 3000, 12, 9500, 99.99, 72]
+
+prices.sort() // sort them as if a string so ... 12, 3000, 400.24, 72 , 9500, 99,99
+
+const ascSort = prices.sort((a,b) => a - b)
+
+ 
+//const ascDesc = prices.sort((a,b) => b - a)
