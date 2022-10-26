@@ -777,3 +777,21 @@ const maxNumberInPrices = prices.reduce((max, currentValue) => {
 // })
 
 console.log(maxNumberInPrices)
+
+// using reduce as a tally
+
+const votes = ['y', 'y', 'y', 'n', 'y', 'y', 'y', 'n', 'y', 'y', 'y', 'n', 'absent', 'y', 'y', 'y', 'n']
+
+const votesResults = votes.reduce((tally, currentVote) => {
+	if(tally[currentVote]) {
+		tally[currentVote]++
+	} else {
+		tally[currentVote] = 1
+	}
+	return tally
+}, {})
+
+// the empty {} at the bottom is the starting value, which in this case is an empty object. 
+
+// in the first iteration there is nothing in tally ( tally['y'] does not exist) so we can't add an additional 1 to it's 
+// total (++ will not work). Therefore the else part kicks in and sets the tally['y'] to 1. The rest get added until we reach 'n' where the cycle repeats. 
