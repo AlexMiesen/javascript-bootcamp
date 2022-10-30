@@ -622,6 +622,12 @@ const books = [
 		rating: 3.67,
 		genres:['fiction', 'graphic novel']
 	},
+	{
+		title: 'A truely horrible book',
+		authors: ['Xavier Time'],
+		rating: 2.37,
+		genres:['fiction', 'graphic novel']
+	},
 ]
 
 books.forEach(function(book) {
@@ -795,3 +801,34 @@ const votesResults = votes.reduce((tally, currentVote) => {
 
 // in the first iteration there is nothing in tally ( tally['y'] does not exist) so we can't add an additional 1 to it's 
 // total (++ will not work). Therefore the else part kicks in and sets the tally['y'] to 1. The rest get added until we reach 'n' where the cycle repeats. 
+
+// another way to do the above: 
+
+// const differentWayForVotesResults = votes.reduce((tally, currentVote) => {
+// 	tally[currentVote] = (tally[currentVote] || 0) + 1;
+// 	return tally;
+// }, {})
+
+// Reminder fo what books looks like.
+// {
+// 	title: 'Harry Potter',
+// 	authors: ['JK Rowling'],
+// 	rating: 4.25,
+// 	genres:['fiction', 'fantasy']
+// },
+
+
+organisedBooksOnRating = books.reduce((groupedBooks,book) => {
+	const key = Math.floor(book.rating);
+
+	if(!groupedBooks[key]) groupedBooks[key] = [];
+	groupedBooks[key].push(book)
+	return groupedBooks;
+}, {})
+
+
+// first time it runs it, it checks is there a 'key' of 4 in groups books (There is not since it is an empty object. So we set it to an empty array)
+// then we push the book object into the groupedbooks empty array:
+// {
+// 	4: [] (first it is empty, then the object gets pushed)
+// }
