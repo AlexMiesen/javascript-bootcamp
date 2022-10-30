@@ -832,3 +832,9 @@ organisedBooksOnRating = books.reduce((groupedBooks,book) => {
 // {
 // 	4: [] (first it is empty, then the object gets pushed)
 // }
+
+//Default params
+
+const greetSomeone = (person, greeting = 'hi') => { // default can be an array, object, string etc) order absolutely matters. 
+	console.log(`${greeting}, ${person}!`)
+} 
