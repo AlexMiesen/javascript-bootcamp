@@ -835,6 +835,27 @@ organisedBooksOnRating = books.reduce((groupedBooks,book) => {
 
 //Default params
 
-const greetSomeone = (person, greeting = 'hi') => { // default can be an array, object, string etc) order absolutely matters. 
-	console.log(`${greeting}, ${person}!`)
+const greetSomeone = (person, greeting = 'hi', punctuation = '!') => { // default can be an array, object, string etc) order absolutely matters. they come at the end.  
+	console.log(`${greeting}, ${person} ${punctuation}`)
 } 
+
+// Spread - basically expanding an iterable (array, string, etc ) into a list of arguments
+
+const randomSpreadNUmbers = [3,4,5,6,7,8] // return '8' the highest number. 
+
+Math.max(...randomSpreadNUmbers) //this will return '8' (we are spreading the numbers into iterable arguements ) == Math.max(3,4,5,6,7,8)
+
+function giveMeFourNumbers(a, b, c, d) {
+	console.log('a', a)
+	console.log('b', b)
+	console.log('c', c)
+	console.log('d', d)
+}
+
+// we could do something like giveMeFourNumbers(3,4,5,6) - this will work 
+
+const colours = ['red', 'yellow', 'blue', 'pink']
+
+// but if we passed in colours this would not work like above - instead we need to do this: 
+
+console.log(giveMeFourNumbers(...colours)) // they are now 4 arguments!
