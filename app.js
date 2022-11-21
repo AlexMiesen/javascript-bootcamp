@@ -860,4 +860,52 @@ const colours = ['red', 'yellow', 'blue', 'pink']
 
 console.log(giveMeFourNumbers(...colours)) // they are now 4 arguments!
 
+const str = 'GOAT'
+
+console.log(giveMeFourNumbers(...str)) // string are also iterable. 
+
+// Spread in Array literals - 
+
+const primates = ['monkey', 'gorrila', 'chimp']
+
+const dogs = ['dalmation', 'pitbull', 'corgi']
+
+const dogsAndPrimates = [...dogs, ...primates] // combines both arrays together. 
+console.log(dogsAndPrimates)
+
+// another example
+console.log([..."abcdefg"])
+
+// Spread in Object literals
+
+
+//properties are added using spread -> see goatSoccerPlayers
+const messi = {
+	country: "Argentina",
+	club: "PSG"
+}
+
+const ronaldo = {
+	country: "Portugal",
+	club: "Manchester United"
+}
+
+const goatSoccerPlayers = {
+	...messi,
+	championsLeagueWinner: true,
+	worldCupWinner: false 
+}
+
+console.log(goatSoccerPlayers)
+
+
+
+
+
+
+console.log()
+console.log()
+console.log()
+console.log()
+console.log()
 
