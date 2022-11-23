@@ -879,7 +879,7 @@ console.log([..."abcdefg"])
 // Spread in Object literals
 
 
-//properties are added using spread -> see goatSoccerPlayers
+//properties are added using spread -> see goatSoccerPlayers. Order does matter, conflicting properties(look it up)
 const messi = {
 	country: "Argentina",
 	club: "PSG"
@@ -898,13 +898,26 @@ const goatSoccerPlayers = {
 
 console.log(goatSoccerPlayers)
 
+console.log(numbers)
+// Rest (looks like spread but is not)
+// if can use lots (1,2,5,6,7) or just (2,4), notice no parametres like (firstNumber, secondNumber)
 
+function totalSumOfNumbers(...numbers) {
+	return numbers.reduce((total, currentVal) =>  {
+		return total + currentVal
+	})
+} 
 
+//use it to collect remaining arguements
 
+function fullNameAndTitles(first, last, ...titles) {
+	console.log('first:', first)
+	console.log('last:', last)
+	console.log('titles:', titles)
+}
+// fullNameAndTitles('tom', 'jones', 'royal', 'king', 'harry')
+// this returns titles in an array with 'royal', 'king', 'harry' along with first and last
 
-
-console.log()
-console.log()
 console.log()
 console.log()
 console.log()
