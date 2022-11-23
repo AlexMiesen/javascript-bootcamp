@@ -901,6 +901,8 @@ console.log(goatSoccerPlayers)
 console.log(numbers)
 // Rest (looks like spread but is not)
 // if can use lots (1,2,5,6,7) or just (2,4), notice no parametres like (firstNumber, secondNumber)
+// we are 'spreading out' the numbers.  
+
 
 function totalSumOfNumbers(...numbers) {
 	return numbers.reduce((total, currentVal) =>  {
