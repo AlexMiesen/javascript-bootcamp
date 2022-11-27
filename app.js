@@ -979,6 +979,68 @@ function parseResponse([protocol, statusCode, contentType]){  // notice the [], 
 
 }
 
-console.log()
-console.log()
+// Short hand properties - create an object literal when you have variables. 
 
+// const getStats = (arr) => {
+// 	const max = Math.max(...arr);
+// 	const min = Math.min(...arr);
+// 	const sum = arr.reduce((total, r ) => total + r);
+// 	const avg = sum / arr.length;
+// 	return {
+// 		max: max,
+// 		min: min,
+// 		sum: sum,
+// 		avg: avg
+// 	}
+// }
+
+const getStats = (arr) => {
+	const max = Math.max(...arr);
+	const min = Math.min(...arr);
+	const sum = arr.reduce((total, r ) => total + r);
+	const avg = sum / arr.length;
+	return {
+		max,
+		min,
+		sum,
+		avg
+	}
+}
+const restuarantReviews = [2,3,4,5,6];
+
+const stats = getStats(restuarantReviews)
+
+// Computed properties
+
+const role = 'host'
+const person = 'Jools Holland'
+const roleTwo = 'Director'
+const personTwo = 'James Cameron'
+
+
+// Old way of doing it
+// const team = {}
+// team[role] = person
+// team[roleTwo] = personTwo
+
+const team = {
+	[role]: person,
+	[roleTwo]: personTwo,
+	[1+6+9]: 'sixteen'
+}
+
+// old way below
+// function addProp(obj, key, value) {
+// 	const copy = {...obj};
+// 	copy[key] = value;
+// 	return copy
+// }
+
+// now using computered properties: 
+
+const addProp = (obj, key, value) => {
+	return {
+		...obj, 
+		[key]: value 
+	}
+};
