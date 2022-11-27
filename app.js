@@ -919,6 +919,14 @@ function fullNameAndTitles(first, last, ...titles) {
 }
 // fullNameAndTitles('tom', 'jones', 'royal', 'king', 'harry')
 // this returns titles in an array with 'royal', 'king', 'harry' along with first and last
+const worldCupFrance98Results = ['France', 'Brazil', 'Croatia', 'Netherlands'];
+
+const [winner, runnerUp, third] = worldCupFrance98Results;
+const [first, , , fourth] = worldCupFrance98Results
+const [gold, ...others] = worldCupFrance98Results // others is an array of brasil, croatia
+
+
+// Object Destructuring 
 
 console.log()
 console.log()
