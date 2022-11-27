@@ -962,9 +962,23 @@ const [{brand: greekGod}, {country}] = sportsBrands // the commma skips the firs
 const [, germanBrand] = sportsBrands;
 const {brand} = germanBrand;
 
+// Param Destructuring
 
+function print({number, club, country}) { // notice the {} we expect an object
+	console.log(`${number}, ${club}, ${country}`)
+}
 
-console.log()
+const response = [
+	'HTTP/1.1',
+	'200 OK',
+	'application/JSON'
+]
+
+function parseResponse([protocol, statusCode, contentType]){  // notice the [], we expect an array 
+	console.log(`Status: ${statusCode}`)
+
+}
+
 console.log()
 console.log()
 
