@@ -928,6 +928,24 @@ const [gold, ...others] = worldCupFrance98Results // others is an array of brasi
 
 // Object Destructuring 
 
+const raul = {
+	number: 7,
+	club: "Real Madrid, Schalke 04",
+	country: "Spain",
+	worldCups: [1998, 2002, 2006]
+}
+
+// const {number, country} = raul; //must exist in object 
+
+const {country: nation} = raul;
+const {worldCups: tournaments} = raul;
+
+// use rest to single out something and collect rest in variable
+
+const {number, club, ...other} = raul;
+
+// Nested Destructuring
+
 console.log()
 console.log()
 console.log()
