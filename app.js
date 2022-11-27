@@ -944,7 +944,25 @@ const {worldCups: tournaments} = raul;
 
 const {number, club, ...other} = raul;
 
-// Nested Destructuring
+// Nested Desctructuring 
+
+const sportsBrands = [{
+	brand: 'Nike',
+	country: 'U.S.A.'
+},{
+	brand: 'Adidas',
+	country: 'Germany',
+}, {
+	brand: 'Asics',
+	country: 'Japan'
+}]
+
+const [{brand: greekGod}, {country}] = sportsBrands // the commma skips the first element. this can get crazy
+
+const [, germanBrand] = sportsBrands;
+const {brand} = germanBrand;
+
+
 
 console.log()
 console.log()
