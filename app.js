@@ -1044,3 +1044,16 @@ const addProp = (obj, key, value) => {
 		[key]: value 
 	}
 };
+
+// Adding methods to objects
+
+const math = {
+	numbers: [12,3,4,57],
+	add: function(x, y) {
+		return x + y
+	},
+	multiply: function(x,y) {
+		return x * y 
+	}
+}
+
