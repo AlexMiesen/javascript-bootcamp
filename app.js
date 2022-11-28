@@ -1061,5 +1061,16 @@ const math = {
 	}
 }
 
-//
+// This; 
+
+// 'this' is a keyword. a reference to the current execution scope. it will give you an object back. That objet will change (which is the confusing part)
+
+function sayHi() {
+	console.log('hi');
+	console.log(this);
+}
+
+// sayHi is now a property on the window browser. the Window is the global scope of the browser. BUT only for the above context. 
+
+
 
