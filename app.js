@@ -1052,8 +1052,14 @@ const math = {
 	add: function(x, y) {
 		return x + y
 	},
-	multiply: function(x,y) {
+	//new short hand below 
+	multiply(x,y) {
 		return x * y 
+	},
+	login() {
+		console.log("you logged in!")
 	}
 }
+
+//
 
