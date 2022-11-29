@@ -1080,23 +1080,28 @@ const bradPitt = {
 	last: "Pitt",
 	occupation: "Actor",
 	fullName() {
-		console.log(this);
+		console.log(this);// this will give us the parent object. 
 		console.log(this.first); // will give us "Brad"
 
 		//we can use destructuring
 		const {first, last, occupation} = this;
+
 		return `${first} ${last}(${occupation})`;
 	},
 	printBio(){
+		console.log(this);
 		const fullName = this.fullName();
 		console.log(`${fullName} is a person!`)
 	}
 
 	// value of 'this' is the object itself. Not the window. 
+	//using 'this' in object is a way to access the parent object (but not always the case)
 
 	// we now have a way to interact with the other properties
-
-
-
 }
+
+
+// This: invocation context
+
+const printBio = bradPitt.printBio;
 
