@@ -1092,7 +1092,16 @@ const bradPitt = {
 		console.log(this);
 		const fullName = this.fullName();
 		console.log(`${fullName} is a person!`)
+	},
+
+	// the value of 'this' is set to the window, very different to printBio or fullName
+	// generally this is why we don't do arrow functions in an object. (not until we start using bind)
+
+	laugh: () => {
+		console.log(this);
+		console.log(`${this.firstName} says HAHAHAHAHA`);
 	}
+
 
 	// value of 'this' is the object itself. Not the window. 
 	//using 'this' in object is a way to access the parent object (but not always the case)
@@ -1103,5 +1112,20 @@ const bradPitt = {
 
 // This: invocation context
 
+// if you type printBio in the console, you will see how 'this' changes. 
+
 const printBio = bradPitt.printBio;
 
+// Annoyomatic Demo
+
+const annoyer = {
+	phrases: ["YOLO", "I can't even", "Cray Cray", "Can't Stop, Won't Stop", "Totes!", "Literally"],
+	pickphrase(){
+		const {phrases} = this;
+
+		const index = Math.floor(Math.random() * phrases.length)
+		return phrases[index]
+
+	}
+	
+}
