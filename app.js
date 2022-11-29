@@ -1070,7 +1070,33 @@ function sayHi() {
 	console.log(this);
 }
 
+
 // sayHi is now a property on the window browser. the Window is the global scope of the browser. BUT only for the above context. 
 
+// Using this in methods
 
+const bradPitt = {
+	first: "Brad",
+	last: "Pitt",
+	occupation: "Actor",
+	fullName() {
+		console.log(this);
+		console.log(this.first); // will give us "Brad"
+
+		//we can use destructuring
+		const {first, last, occupation} = this;
+		return `${first} ${last}(${occupation})`;
+	},
+	printBio(){
+		const fullName = this.fullName();
+		console.log(`${fullName} is a person!`)
+	}
+
+	// value of 'this' is the object itself. Not the window. 
+
+	// we now have a way to interact with the other properties
+
+
+
+}
 
